@@ -29,6 +29,6 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
+br:
   app:
-    title: 'Work Time Management'
+    title: 'Gerenciador de horarios de trabalho'
