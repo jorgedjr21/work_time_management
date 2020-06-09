@@ -17,6 +17,10 @@
       </li>
     </ul>
 
-    <a class="btn btn-secondary my-2" href="<%= new_user_session_path %>"><%= t('actions.signin') %></a>
+    <% if user_signed_in? %>
+      <%= link_to "#{t('actions.signout')} <i class='fas fa-sign-out-alt ml-2'></i> ".html_safe, destroy_user_session_path, class: 'btn btn-secondary my-2', method: :delete %>
+    <% else %>
+      <a class="btn btn-secondary my-2" href="<%= new_user_session_path %>"><%= t('actions.signin') %></a>
+    <% end %>
   </div>
 </nav>

@@ -41,12 +41,28 @@ br:
         email: 'Email'
         password: 'Senha'
         password_confirmation: 'Confirmação da senha'
+        remember_me: 'Lembrar'
     hints:
       user:
         password_characters: '%{minimum} caracteres pelo menos'
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: 'não pode ficar em branco'
+            email:
+              blank: 'não pode ficar em branco'
+              invalid: 'não é válido'
+            password:
+              blank: 'não pode ficar em branco'
+              too_short : 'é muito curta'
+            password_confirmation:
+              confirmation: 'deve ser identico à senha'
   actions:
     signup: 'Cadastrar'
     signin: 'Login'
+    signout: 'Sair'
     save: 'Salvar'
     newuser: 'Cadastro de usuário'
     forgot_password: 'Esqueceu a senha?'

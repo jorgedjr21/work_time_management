@@ -38,7 +38,7 @@ br:
       updated_not_active: "Sua senha foi alterada com sucesso."
     registrations:
       destroyed: "Sua conta foi cancelada com sucesso. Esperamos ve-lo novamente futuramente"
-      signed_up: "Bem vindo! Seu cadastro foi realizado com sucesso."
+      signed_up: "Parabéns, seu cadastro foi realizado com sucesso."
       signed_up_but_inactive: "Você se cadastrou com sucesso. No entanto, não foi possível fazer o login porque sua conta ainda não está ativada."
       signed_up_but_locked: "Você se cadastrou com sucesso. No entanto, não foi possível fazer o login porque sua conta está bloqueada."
       signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
@@ -46,7 +46,7 @@ br:
       updated: "Sua conta foi atualizada com sucesso."
       updated_but_not_signed_in: "Sua conta foi atualizada com sucesso, mas como sua senha foi alterada, é necessário fazer login novamente."
     sessions:
-      signed_in: "Logado com sucesso!"
+      signed_in: "Login efetuado com sucesso!"
       signed_out: "Sessão encerrada com sucesso!"
       already_signed_out: "Sua sessão foi encerrada com sucesso!"
     unlocks:

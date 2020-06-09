@@ -45,7 +45,7 @@ en:
       user:
         password_characters: 'at least %{minimum} characters'
   actions:
-    sign_up: 'Sign Ur'
+    sign_up: 'Sign Up'
   app:
     title: 'Work Time Management'
     menu:

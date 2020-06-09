@@ -1,0 +1,40 @@
+<div class="row text-center">
+  <%- if controller_name != 'sessions' %>
+    <div class="col">
+        <%= link_to t('actions.signin'), new_session_path(resource_name), class: 'btn btn-outline-info' %>
+    </div>
+  <% end %>
+
+  <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+    <div class="col">
+      <%= link_to t('actions.signup'), new_registration_path(resource_name), class: 'btn btn-outline-info' %>  
+    </div>
+  <% end %>
+
+  <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+    <div class="col">
+      <%= link_to t('actions.forgot_password'), new_password_path(resource_name), class: 'btn btn-outline-info' %>
+    </div>
+  <% end %>
+
+  <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+    <div class="col">
+      <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name), class: 'btn btn-outline-info' %>  
+    </div>
+  <% end %>
+
+  <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
+    <div class="col">
+      <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name), class: 'btn btn-outline-info' %>
+    </div>
+  <% end %>
+
+  <%- if devise_mapping.omniauthable? %>
+    <div class="col">
+      <%- resource_class.omniauth_providers.each do |provider| %>
+        <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), class: 'btn btn-outline-info' %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+
