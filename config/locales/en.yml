@@ -30,5 +30,23 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  activerecord:
+    models:
+      user:
+        one: 'User'
+        other: 'Users'
+    attributes:
+      user:
+        name: 'Name'
+        email: 'Email'
+        password: 'Password'
+        password_confirmation: 'Password Confirmation'
+    hints:
+      user:
+        password_characters: 'at least %{minimum} characters'
+  actions:
+    sign_up: 'Sign Ur'
   app:
     title: 'Work Time Management'
+    menu:
+      newuser: 'User registration'

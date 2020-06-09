@@ -30,5 +30,26 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 br:
+  activerecord:
+    models:
+      user:
+        one: 'Usuário'
+        other: 'Usuários'
+    attributes:
+      user:
+        name: 'Nome'
+        email: 'Email'
+        password: 'Senha'
+        password_confirmation: 'Confirmação da senha'
+    hints:
+      user:
+        password_characters: '%{minimum} caracteres pelo menos'
+  actions:
+    signup: 'Cadastrar'
+    signin: 'Login'
+    save: 'Salvar'
+    newuser: 'Cadastro de usuário'
+    forgot_password: 'Esqueceu a senha?'
+
   app:
     title: 'Gerenciador de horarios de trabalho'
