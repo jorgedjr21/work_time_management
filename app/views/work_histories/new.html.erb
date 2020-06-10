@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <%= simple_form_for(@work_history) do |f| %>
+        <div class="card-body">
+          <h4 class="card-title"><%= t('actions.new_work_history') %></h4>
+          <%= f.error_notification %>
+
+          <div class="row">
+            <div class="col-md-3">
+              <%= f.input :instant_date, as: :string, input_html: { value: Time.zone.now.strftime('%d/%m/%Y'), readonly: 'readonly'} %>
+            </div>
+
+            <div class="col-md-3">
+              <%= f.input :instant_time, as: :string, input_html: { class: 'realtime',   value: Time.zone.now.strftime('%H:%M:%S'), readonly: 'readonly'} %>
+            </div>
+            <div class="col-md-6">
+              <%= f.input :work_history_type, as: :select, prompt: t('actions.select_prompt', kind: "o #{WorkHistory.model_name.human}"), collection: WorkHistory.work_history_types.keys, label_method: lambda { |work_type| t("activerecord.attributes.work_history.work_history_types.#{work_type}") } %>
+
+            </div>
+          </div>
+        </div>
+        <div class="card-footer text-center">
+          <%= f.button :submit, t('actions.save'), class: 'btn btn-primary btn-lg' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<%= javascript_pack_tag 'timeinput' %>
