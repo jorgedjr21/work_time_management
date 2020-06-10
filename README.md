@@ -9,6 +9,10 @@ Simple working time/hourse management system
  - docker-compose
  - MySQL runing in some server (docker or local)
 
+### RUNNING WITH DOCKER
+
+ps: You will be not necessary install MySQL, the docker-compose file already has the config to run the database
+
 1 - Clone or download this repo [Download Link](https://github.com/jorgedjr21/work_time_management/releases)
 
 2 - Open the repo folder and them
@@ -27,7 +31,7 @@ Simple working time/hourse management system
   docker-compose up
 ```
 
-**OR**
+### RUNNING LOCALLY
 
 Run the project localy: (ps: You will need rails and bundler installed in your machine!)
 
@@ -58,6 +62,8 @@ Run the project localy: (ps: You will need rails and bundler installed in your m
 ```
 
 ## Tests and Coverage
+
+- The tests are inside the folder `spec/`
 
 - To run the tests, you can use this comand (inside docker or locally, depends how you run the application):
 
