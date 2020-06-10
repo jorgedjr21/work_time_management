@@ -37,7 +37,7 @@ Run the project localy: (ps: You will need rails and bundler installed in your m
 
 1 - Clone or download this repo [Download Link](https://github.com/jorgedjr21/work_time_management/releases)
 
-2 - Configure the database.yml file inside the config/ folder
+2 - Configure the database.yml file inside the `config/` folder
 
 ```yml
   default: &default
