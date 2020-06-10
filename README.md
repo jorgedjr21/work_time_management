@@ -15,7 +15,7 @@ ps: You will be not necessary install MySQL, the docker-compose file already has
 
 1 - Clone or download this repo [Download Link](https://github.com/jorgedjr21/work_time_management/releases)
 
-2 - Open the repo folder and them
+2 - Open the repo folder and them (build, install gems and configure DB):
 ```shell
   docker-compose build
   docker-compose run --rm web sh
