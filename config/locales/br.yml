@@ -57,6 +57,7 @@ br:
             email:
               blank: 'não pode ficar em branco'
               invalid: 'não é válido'
+              taken: 'já está em uso'
             password:
               blank: 'não pode ficar em branco'
               too_short : 'é muito curta'
