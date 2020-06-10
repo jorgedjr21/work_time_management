@@ -1,24 +1,68 @@
-# README
+# Work Time Management
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple working time/hourse management system
 
-Things you may want to cover:
+## How to install
 
-* Ruby version
+ **Requiriments (for dockerized dev env)** 
+ - Docker
+ - docker-compose
+ - MySQL runing in some server (docker or local)
 
-* System dependencies
+1 - Clone or download this repo [Download Link](https://github.com/jorgedjr21/work_time_management/releases)
 
-* Configuration
+2 - Open the repo folder and them
+```shell
+  docker-compose build
+  docker-compose run --rm web sh
+  
+  # Inside the docker-container
+  bundle install && rails db:setup
+  exit
+```
 
-* Database creation
+3 - After exiting the container
 
-* Database initialization
+```shell
+  docker-compose up
+```
 
-* How to run the test suite
+**OR**
 
-* Services (job queues, cache servers, search engines, etc.)
+Run the project localy: (ps: You will need rails and bundler installed in your machine!)
 
-* Deployment instructions
+1 - Clone or download this repo [Download Link](https://github.com/jorgedjr21/work_time_management/releases)
 
-* ...
+2 - Configure the database.yml file inside the config/ folder
+
+```yml
+  default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: # UPDATE THE PASSWORD TO YOUR LOCAL DB USER
+  password: # UPDATE THE PASSWORD TO YOUR LOCAL DB PASSWORD
+  host: # UPDATE THE PASSWORD TO YOUR LOCAL DB HOST
+```
+
+3 - Install gems, create the database and the migrations
+
+```shell
+  bundle install && rails db:setup
+```
+
+4 - Up the application and access it
+
+```shell
+  rails s -b 0.0.0.0 -p 3000
+```
+
+## Tests and Coverage
+
+- To run the tests, you can use this comand (inside docker or locally, depends how you run the application):
+
+```shell
+bundle exec rspec
+```
+
+- Aplication has **100%** of coverage actually
