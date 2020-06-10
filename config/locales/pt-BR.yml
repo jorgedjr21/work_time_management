@@ -29,7 +29,7 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-br:
+pt-BR:
   activerecord:
     models:
       user:
@@ -45,9 +45,24 @@ br:
         password: 'Senha'
         password_confirmation: 'Confirmação da senha'
         remember_me: 'Lembrar'
+      work_history:
+        instant_date: 'Data do apontamento'
+        instant_time: 'Horário do apontamento'
+        work_history_type: Tipo do apontamento
+        work_history_types:
+          entrance: 'Entrada/inicio do trabalho'
+          out_for_lunch: 'Saída para almoço'
+          lunch_arrival: 'Volta almoço'
+          end_day: 'Encerramento/saída do trabalho'
     hints:
       user:
         password_characters: '%{minimum} caracteres pelo menos'
+    success:
+      models:
+        user:
+          create: 'Usuário criado com sucesso!'
+        work_history:
+          create: 'Apontamento de trabalho criado com sucesso!'
     errors:
       models:
         user:
@@ -68,10 +83,12 @@ br:
     signin: 'Login'
     signout: 'Sair'
     save: 'Salvar'
-    newuser: 'Cadastro de usuário'
+    new_user: 'Cadastro de usuário'
+    new_work_history: 'Cadastro de apontamento de trabalho'
     my_work_histories: 'Meus apontamentos'
     new_work_histories: 'Novo apontamento'
     forgot_password: 'Esqueceu a senha?'
+    select_prompt: 'Selecione %{kind}'
 
   app:
     title: 'Gerenciador de horarios de trabalho'
