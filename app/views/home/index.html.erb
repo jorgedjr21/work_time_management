@@ -1,1 +1,32 @@
-<h1>Home</h1>
+<% if user_signed_in? %>
+
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Informações</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="card text-black bg-light">
+        <div class="card-body">
+          <h4 class="card-title text-center"><%= @work_history_reports[:total] %></h4>
+        </div>
+        <div class="card-footer text-center">
+          <%= t('activerecord.attributes.work_history.reports.total') %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card text-black bg-light">
+        <div class="card-body">
+          <h4 class="card-title text-center"><%= @work_history_reports[:today] %></h4>
+        </div>
+        <div class="card-footer text-center">
+          <%= t('activerecord.attributes.work_history.reports.today') %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<% end %>

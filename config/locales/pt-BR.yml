@@ -54,6 +54,9 @@ pt-BR:
           out_for_lunch: 'Saída para almoço'
           lunch_arrival: 'Volta almoço'
           end_day: 'Encerramento/saída do trabalho'
+        reports:
+          total: 'Seus apontamentos'
+          today: 'Seus apontamentos hoje'
     hints:
       user:
         password_characters: '%{minimum} caracteres pelo menos'
