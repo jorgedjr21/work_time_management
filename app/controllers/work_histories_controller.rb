@@ -2,7 +2,8 @@ class WorkHistoriesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-  
+    @work_histories = WorkHistory.by_user(current_user.id)
+    @work_histories = @work_histories.from_today if params[:today].present?
   end
   
   def new

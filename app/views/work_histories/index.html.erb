@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col">
+    <h2>Apontamentos de trabalho lançados</h2>
+  </div>
+
+  <div class="col text-right">
+    <% if params[:today].present? %>
+      <a href="<%= work_histories_path() %>" class="btn btn-info"><%= t('activerecord.attributes.work_history.filter.all') %></a>
+    <% else %>
+      <a href="<%= work_histories_path(today: true) %>" class="btn btn-info"><%= t('activerecord.attributes.work_history.filter.today') %></a>
+    <% end %>
+  </div>
+</div>
+<hr/>
+
+<div class="row">
+  <div class="col">
+    <table class="table table-hover table-striped table-bordered">
+      <thead>
+        <tr class='bg-info text-white'>
+          <% work_history_table_header(@work_histories.first).each do |header| %>
+            <th><%= WorkHistory.human_attribute_name(header) %></th>
+          <% end %>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @work_histories.each do |work_history| %>
+          <tr>
+            <td><%= t("activerecord.attributes.work_history.work_history_types.#{work_history.work_history_type}") %></td>
+            <td><%= work_history.instant&.strftime('%d/%m/%Y %H:%M:%S') %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

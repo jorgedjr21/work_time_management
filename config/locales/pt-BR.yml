@@ -48,6 +48,7 @@ pt-BR:
       work_history:
         instant_date: 'Data do apontamento'
         instant_time: 'Horário do apontamento'
+        instant: 'Data e Hora do Apontamento'
         work_history_type: Tipo do apontamento
         work_history_types:
           entrance: 'Entrada/inicio do trabalho'
@@ -57,6 +58,9 @@ pt-BR:
         reports:
           total: 'Seus apontamentos'
           today: 'Seus apontamentos hoje'
+        filter:
+          all: 'Filtrar por todos os apontamentos'
+          today: 'Filtrar por apontamentos de hoje'
     hints:
       user:
         password_characters: '%{minimum} caracteres pelo menos'

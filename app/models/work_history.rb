@@ -8,6 +8,8 @@ class WorkHistory < ApplicationRecord
   validates :instant_date, presence: true, allow_blank: false
   validates :instant_time, presence: true, allow_blank: false
 
+  scope :by_user, ->(user_id) { where(user_id: user_id) }
+
   def self.from_today
     today_start = Time.zone.today.beginning_of_day
     today_end = Time.zone.today.end_of_day
