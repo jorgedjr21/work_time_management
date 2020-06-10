@@ -6,7 +6,7 @@ RSpec.feature 'RegisterUsers', type: :feature do
     it 'must visit the new user page' do
       visit '/'
       click_link 'Cadastro de usuário'
-      expect(page).to have_content('Cadastro de Usuários')
+      expect(page).to have_content('Cadastro de usuário')
     end
 
     context 'filling form correcty' do

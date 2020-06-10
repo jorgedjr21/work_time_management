@@ -13,18 +13,18 @@
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <% if user_signed_in? %>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown <%= params[:controller] == 'work_histories' ? 'active' : '' %>">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <%= WorkHistory.model_name.human(count: 2)%>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#"><%= t('actions.new_work_histories') %></a>
+            <a class="dropdown-item" href="<%= new_work_history_path %>"><%= t('actions.new_work_histories') %></a>
             <a class="dropdown-item" href="#"><%= t('actions.my_work_histories') %></a>
           </div>
         </li>
       <% else %>
         <li class="nav-item <%= params[:controller] == 'devise/registrations' ? 'active' : '' %>">
-          <a href="<%= new_user_registration_path %>" class="nav-link"><%= t('actions.newuser') %></a>
+          <a href="<%= new_user_registration_path %>" class="nav-link"><%= t('actions.new_user') %></a>
         </li>
       <% end %>
     </ul>

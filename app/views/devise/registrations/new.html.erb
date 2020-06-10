@@ -3,7 +3,7 @@
     <div class="card">
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <div class="card-body">
-          <h4 class="card-title">Cadastro de <%= User.model_name.human(count: 2) %> </h4>
+          <h4 class="card-title"><%= t('actions.new_user') %> </h4>
             <%= f.error_notification %>
 
             <div class="form-inputs">
