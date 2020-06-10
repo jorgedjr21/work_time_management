@@ -35,6 +35,9 @@ br:
       user:
         one: 'Usuário'
         other: 'Usuários'
+      work_history:
+        one: 'Apontamento de trabalho'
+        other: 'Apontamentos de trabalho'
     attributes:
       user:
         name: 'Nome'
@@ -65,6 +68,8 @@ br:
     signout: 'Sair'
     save: 'Salvar'
     newuser: 'Cadastro de usuário'
+    my_work_histories: 'Meus apontamentos'
+    new_work_histories: 'Novo apontamento'
     forgot_password: 'Esqueceu a senha?'
 
   app:
