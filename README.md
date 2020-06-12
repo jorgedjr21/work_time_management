@@ -1,6 +1,6 @@
 # Work Time Management
 
-Simple working time/hourse management system
+Simple working time management system
 
 ## How to install
 
