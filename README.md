@@ -71,4 +71,4 @@ Run the project localy: (ps: You will need rails and bundler installed in your m
 bundle exec rspec
 ```
 
-- Aplication has **100%** of coverage actually
+- Application has **100%** of coverage actually
